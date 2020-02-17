@@ -1,0 +1,18 @@
+import decimal
+balance = 0
+
+def get_user_input(action):
+ return decimal.Decimal(input("Please enter amount to {} from your account: ".format(action)))
+
+def deposit():
+  amount = get_user_input("deposit")
+  return balance + amount
+
+def withdraw():
+  amount = get_user_input("withdraw")
+  return balance - amount
+
+
+balance = deposit()
+balance = withdraw()
+print("Your Balance is {}".format(balance))
